@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0px,auto;
+	}
+	#outer{
+		width: 500px;
+		height: 325px;
+		margin: 10px;
+		padding: 10px;
+		text-align: center;
+	}
+</style>
+<body>
+<div id="outer">
+	<p>一共4张图片，当前第1张</p>
+	<img src="image/10.313.jpg">
+	<button id="prev">上一张</button>
+	<button id="next">下一张</button>
+</div>
+
+<script type="text/javascript">
+var images=["image/10.313.jpg","image/10.314.jpg","image/10.315.jpg","image/10.316.jpg"]
+var prev=document.getElementById("prev");
+var next=document.getElementById("next");
+var imagSrc=document.getElementsByTagName("img")[0];
+var p=document.getElementById("outer").getElementsByTagName("p")[0];
+var index=0
+prev.onclick=function(){
+	
+if (index==0) {
+	index=images.length;
+}
+index--;
+imagSrc.src=images[index];
+p.innerHTML="一共4张图片，当前第"+(index+1)+"张"
+}
+next.onclick=function(){
+	if (index==images.length-1) {
+	index=-1;
+}
+index++;
+imagSrc.src=images[index];
+p.innerHTML="一共4张图片，当前第"+(index+1)+"张"
+}
+
+</script>
+</body>
+</html>
