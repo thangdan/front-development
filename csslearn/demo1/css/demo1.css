@@ -1,0 +1,391 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.clearFix:before,.clearFix:after{
+	content: "";
+	display:table;
+	clear: both;
+}
+.clearFix{
+	zoom:1;
+}
+.head{
+	height: 120px;
+
+}
+.w{
+	width: 1300px;
+	margin: 0 auto;
+}
+.head h2{
+	margin-top: 33px;
+	float: left;
+	margin-left: 60px;
+	font-size: 30px;
+    line-height: 0em;
+	color: #000;
+
+}
+.head .uk{
+	margin-top: 33px;
+	margin-left: 136px;
+	float: left;
+	width: 36px;
+	height: 10px;
+	background: url(../image/head/icon.png) no-repeat 31px 0px;
+   	font: Times ;
+   	font-size: 12px;
+   	line-height: 0px;
+   	color: #000;
+  
+}
+.head a{
+	text-decoration: none;
+}
+.head a:hover{
+	color: #898282;
+}
+
+.head .aright{
+	margin-top: 33px;
+	font-size: 12px;
+	font: Times ;
+	color: #000;
+	line-height: 0px;
+	margin-right: 54px;
+	float: right;
+	right: 163px;
+}
+.head .icon-bag{
+	margin-top: 30px;
+	float: right;
+	margin-right: 16px;
+	width: 12px;
+	height: 12px;
+	display: block;
+	background: url(../image/head/icon-bag.jpg) no-repeat red;
+}
+.head .bag{
+	margin-top: 33px;
+	float: right;
+	font: Times;
+	color: #000;
+	font-size: 12px;
+	line-height: 0px;
+
+	margin-right:60px;
+}
+.head ul{
+	float: left;
+	margin-top: 24px;
+    margin-left: 60px;
+	clear: both;
+	list-style: none;
+}
+.head li {
+	float: left;
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+}
+.head li a{
+	padding-right: 55px;
+	color: #000;
+}
+.head li .no-padding{
+	padding-right: 0px;
+}
+.head .search{
+	margin-top: 20px;
+	margin-right: 60px;
+	width: 99px;
+	height: 23px;
+	background: url(../image/head/icon-search.jpeg) no-repeat;
+	border:none;
+	float: right;
+	font-size: 12px;
+	color: #a8a8a8;
+	font: Times;
+	padding:0 10px;
+}
+._promo_block{
+	height: 850px;
+	background: url(../image/_promo_block.jpeg) no-repeat;
+}
+.banners{
+	height: 386px;
+}
+.banners .bannersL{
+	float: left;
+	width: 50%;
+height: 100%;
+	background: url(../image/bannerL.jpeg) no-repeat ;
+}
+.banners .bannersR{
+	float: right;
+	width: 50%;
+	height: 100%;
+	background: url(../image/bannerR.jpeg) no-repeat;
+}
+.banners .bannersL .p1{
+	float: left;
+	margin-left: 427px;
+	margin-top: 65px;
+	margin-left: 
+	font-size: 30px;
+	font-weight: bold;
+	font-family: Times;
+	line-height: 0px;
+	color: #000;
+}
+.banners .bannersL .p2{
+	margin-right: 180px;
+	margin-top: 18px;
+	float: right;
+	font-size: 16px;
+	font-family: Times;
+	line-height: 0px;
+	color: #757575;
+}
+
+.banners .bannersR .p1{
+	float: left;
+	margin-left: 337px;
+	margin-top: 65px;
+	margin-left: 
+	font-size: 30px;
+	font-weight: bold;
+	font-family: Times;
+	line-height: 0px;
+	color: #000;
+}
+.banners .bannersR .p2{
+	margin-right: 220px;
+	margin-top: 18px;
+	float: right;
+	font-size: 16px;
+	font-family: Times;
+	line-height: 0px;
+	color: #757575;
+}
+.newArriv h2{
+	margin-left: 489px;
+	margin-top: 135px;
+	font-size: 60px;
+	line-height: 1em;
+	color: #000;
+	font-family: Times;
+}
+.newArriv .newArriv_1,
+.newArriv .newArriv_2,
+.newArriv .newArriv_3,
+.newArriv .newArriv_4{
+	margin-top: 95px;
+	float: left;
+	height: 556px;
+	width: 239px;
+	background: #00f;
+	margin-right: 72px;
+
+}
+.newArriv .newArriv_1{
+	background: url(../image/newArriv/newArriv_1.jpeg) no-repeat top center;
+	margin-left: 60px;
+}
+.newArriv .newArriv_2{
+	background: url(../image/newArriv/newArriv_2.jpeg) no-repeat top center;
+}
+.newArriv .newArriv_3{
+	background: url(../image/newArriv/newArriv_3.jpeg) no-repeat top center;
+}
+
+.newArriv .newArriv_4{
+	background: url(../image/newArriv/newArriv_4.jpeg) no-repeat top center ;
+	margin-right: 0px;
+}
+.newArriv p{
+	font-size: 14px;
+	line-height: 1em;
+	margin-top: 387px;
+	text-align: center;
+}
+.newArriv .p1{
+	color: #000;
+
+}
+.newArriv .p2{
+	color: #cfcfcf;
+	margin-top: 10px;
+
+}
+.newArriv .but{
+	clear: both;
+	width:340px;
+	height: 75px;
+	margin: 0px auto;
+	background: url(../image/newArriv/but.jpeg);
+}
+.newArriv .but p{
+
+	font-size: 26px;
+	font-family: Times;
+	line-height: 75px;
+	color: #000;
+	text-align: center;
+
+}
+.about_us{
+	text-align: center;
+}
+.about_us h2{
+	font-size: 60px;
+	font-family: Times;
+	line-height: 1em;
+	color: #000;
+	text-align: center;
+	margin-top: 142px;
+}
+.about_us .p1{
+	margin-top: 38px;
+	margin: 38px auto 0px;
+	font-size: 16px;
+	width: 774px;
+	text-align: center;
+	line-height: 1.5em;
+}
+.about_us .p2{
+	width: 650px;
+	text-align: left;
+
+	margin: 70px auto 0px;
+	font-size: 15px;
+	padding-bottom: 70px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.about_us .hh2{
+	width: 850px;
+	text-align: center;
+	font-size: 26px;
+	line-height: 1em;
+	margin: 28px auto 0px;
+	font-family: Times;
+}
+.about_us .hh2 span{
+	color: red
+}
+.about_us .p3{
+	width:830px;
+	margin: 20px auto 0px;
+	font-size: 16px;
+	line-height: 1em;
+	word-spacing: -2px;
+	font-family: Times;
+}
+.about_us .p4{
+	font-size: 15px;
+	width: 650px;
+	margin: 56px auto 205px;
+	text-align: left;
+	line-height: 1em;
+	font-family: Times;
+}
+.down{
+	height: 447px;
+	border-top: 1px solid  #e5e5e5;
+}
+.down ul{
+	height: 394px;
+	float: left;
+	list-style: none;
+	margin-left: 60px;
+	margin-top: 54px;
+	
+}
+.down ul span{
+	font-size: 18px;
+	font-family: Times;
+	line-height: 1em;
+	margin: 53px 0 40px 0px;
+}
+.down ul li{
+	font-family: Times;
+	font-size: 14px;
+	line-height: 1em;
+	margin: 24px 0px 0 0;
+	font-weight: bold;
+}
+.down ul .addTop{
+	margin-top: 40px;
+}
+.down ul a{
+	text-decoration: none;
+} 
+.down ul p{
+	font-size: 14px;
+	font-family: Times;
+	line-height: 1em;
+
+}
+.down ul .tst{
+	font-weight: normal;
+}
+.down ul .tst span{
+	font-weight: bold;
+}
+.down ul li .p2{
+	margin-top: 77px;
+	font-size:16px;
+	font-family: Times;
+	line-height: 1em;
+
+}
+.down .ul2{
+	margin-left: 173px;
+}
+.down .ul3{
+	margin-left: 250px;
+}
+.down .ul4{
+	margin-left: -36px;
+}
+.footer{
+	border-top: 1px solid #e5e5e5;
+}
+.footer p{
+	margin-top: 32px;
+	float: left;
+	font-family: Times;
+	font-size: 12px;
+	margin: 32px 0 40px 60px;
+}
+.footer h2{
+	margin-right: 12px;
+	margin-top: 32px;
+	float: right;
+	font-size: 18px;
+	font-family: Times;
+	line-height: 1em;
+}
+.footer span{
+	margin-top: 34px;
+	float: right;
+	font-size: 12px;
+	font-family: Times;
+	line-height: 1em;
+	margin-right: 286px;
+}
+.footer a{
+	margin-top: 34px;
+	margin-right: 39px;
+	float: right;
+	font-size: 12px;
+	line-height: 1em;
+	font-family: Times;
+}
+.footer .add-margin{
+	margin-right: 60px;
+}
+.footer a{
+	text-decoration: none;
+}
