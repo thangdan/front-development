@@ -1,0 +1,23 @@
+
+.outer{
+	width: 240px;
+	padding: 10px;
+	background-color: yellow;
+	margin: 50px auto;
+	text-align: center;
+}
+.clearfix:after,
+.clearfix:before{
+content: "";
+display: table;
+clear: both;
+}
+.outer > img{
+	width: 240px;
+	height: 340px;
+}
+.outer button{
+margin-top: 10px;
+display: inline-block;
+
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+</head>
+<link rel="stylesheet" type="text/css" href="photoswitch.css">
+
+<script type="text/javascript">
+window.onload=function(){
+	var image=["image/content/content01.jpeg","image/content/content02.jpeg",
+	"image/content/content03.jpeg",
+	"image/content/content04.jpeg",
+	"image/content/content05.jpeg",
+	"image/content/content06.jpeg",
+	"image/content/content07.jpeg",
+	"image/content/content08.jpeg"]
+	var pre=document.getElementById("pre");
+	var next=document.getElementById("next");
+	var imgs=document.getElementById("imgs");
+	var pcount=document.getElementsByTagName("p")[0];
+	var index=0;
+	pcount.innerHTML="一共有 "+image.length+" 这是第 "+(index+1)+" 张图片";
+	console.log(pcount);
+	
+    pre.onclick=function(){
+	   index--;
+	   if (index==-1) {
+ 	  	index=image.length-1;
+ 	  }
+	   imgs.src=image[index];
+	   pcount.innerHTML="一共有 "+image.length+" 这是第 "+(index+1)+" 张图片";
+  	  console.log(imgs.src);
+    }
+    next.onclick=function(){
+    index++;
+    if (index==8) {
+    	index=0;
+    }
+    imgs.src=image[index];
+    pcount.innerHTML="一共有 "+image.length+" 这是第 "+(index+1)+" 张图片";
+    console.log(imgs.src)
+     
+    }
+	
+
+}
+
+</script>
+
+<body>
+<div class="outer clearfix" >
+<p></p>
+<img id="imgs" src="image/content/content01.jpeg">
+<button id="pre">上一张</button>
+<button id="next">下一张</button>	
+</div>
+</body>
+</html>
