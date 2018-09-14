@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>鼠标跟随事件</title>
+	<link rel="stylesheet" type="text/css" href="drag.css">
+	<script type="text/javascript">
+		window.onload=function(){
+			var box1=document.getElementById("box1");
+			var box2=document.getElementById("box2");
+			//box1拖拽
+	        drag(box1);
+	        drag(box2);
+		
+
+		}
+		//拖拽函数 obj：拖拽的元素对象
+		function drag(obj){
+				obj.onmousedown=function(event1){
+				//兼容IE8
+				obj.setCapture && obj.setCapture();
+				event1=event1 || window.event1;
+				var x=event1.clientX-this.offsetLeft;
+				var y=event1.clientY-this.offsetTop;
+				console.log("按下了");
+				document.onmousemove=function(event){
+					console.log("移动了");
+
+					event=event || window.event;
+					var left=event.clientX - x + "px";
+					var top=event.clientY - y + "px";
+					obj.style.left=left;
+					obj.style.top=top;
+
+
+			
+				}
+				document.onmouseup=function(){
+				//释放box1的捕获
+				obj.releaseCapture && obj.releaseCapture();
+				console.log("抬起了");
+				document.onmousemove=null;
+				document.onmouseup=null;
+			}
+		   //释放浏览器的默认行为
+			return false;
+
+			}
+		
+
+
+		}
+		//获取元素的样式 obj:元素对象，name：要获取的样式名
+		function getStyle(obj,name){
+			if(window.getComputedStyle){
+				return getComputedStyle(obj,null)[name];
+			}
+			else{
+				return obj.currentStyle[name];
+			}
+		}
+	</script>
+</head>
+<body>
+
+<div class="box1" id="box1">
+	
+</div>
+<div class="box2" id="box2"></div>
+</body>
+</html>

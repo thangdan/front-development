@@ -1,0 +1,20 @@
+.box1{
+	background-color: red;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+*{
+	margin: 0px;
+	padding: 0;
+}
+body{
+	position: relative;
+}
+.box2{
+	top: 200px;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background-color: yellow;
+}

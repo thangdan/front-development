@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>增加和删除练习</title>
+	<link rel="stylesheet" type="text/css" href="deleteAdd.css">
+	<script type="text/javascript">
+		var deA=function(){
+			var tr=this.parentNode.parentNode;
+				if (confirm("确认删除吗？")) {
+					tr.parentNode.removeChild(tr);
+					}
+
+		}
+		window.onload=function(){
+		var aAll=document.getElementsByTagName("a");
+			for (var i = 0; i < aAll.length; i++) {
+				aAll[i].onclick=deA;
+			}
+			var submit=document.getElementsByName("submit")[0];
+			
+			var tbody=document.getElementsByTagName("tbody")[0];
+			submit.onclick=function(){
+			var name=document.getElementsByName("username")[0].value;
+			var email=document.getElementsByName("email")[0].value;
+			var salary=document.getElementsByName("salary")[0].value;
+			var tr=document.createElement("tr");
+			tr.innerHTML="<td>"+name+"</td>"+
+						 "<td>"+email+"</td>"+
+						 "<td>"+salary+"</td>"+
+						 "<td><a>Delete</a></td>";
+			var a=tr.getElementsByTagName("a")[0];
+			a.href="#";
+			tbody.appendChild(tr);
+			a.onclick=deA;
+			console.log(name);	
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<table class="table01">
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Salary</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td>Tom</td>
+			<td>tom@tom.com</td>
+			<td>5000</td>
+			<td><a href="#">Delete</a></td>
+		</tr>
+			<tr>
+			<td>Jerry</td>
+			<td>Jerry@tom.com</td>
+			<td>8000</td>
+			<td><a href="#">Delete</a></td>
+		</tr>
+			<tr>
+			<td>Bob</td>
+			<td>Bob@tom.com</td>
+			<td>10000</td>
+			<td><a href="#">Delete</a></td>
+		</tr>
+	</table>
+	<form href="#" class="form01">
+		<p>添加新员工</p>
+		<label for="name">name</label>
+		<input type="text" name="username" id="name"><br/>
+		<label for="email">email</label>
+		<input type="text" name="email" id="email"><br/>
+		<label for="salary">salary</label>
+		<input type="text" name="salary" id="salary"><br>
+		<input type="button" name="submit" value="submit">
+	</form>
+</body>
+</html>
