@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scrollEvent</title>
+	<link rel="stylesheet" type="text/css" href="test.css">
+	<meta charset="utf-8">
+	<script type="text/javascript" src="tool.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var imgs=document.getElementsByTagName("img");
+			var ul=document.getElementsByTagName("ul")[0];
+			var allA=document.getElementsByTagName("a");
+			var index=0;
+			var count;
+			allA[0].style.backgroundColor="#000";
+			ul.style.width=imgs.length*260 + "px";
+			for (var i = 0; i < allA.length; i++) {
+				allA[i].num=i;
+				allA[i].onclick=function(){
+					count=this.num;
+					clearInterval(Timmer);
+					allAHover();
+					this.style.backgroundColor="#000";
+					move(ul,"left",-this.num*260,20,function(){
+						index=count;
+						autoChange();
+					});
+
+
+				}
+			}
+			autoChange();
+
+
+			function allAHover(){
+				for (var i = 0; i < allA.length; i++) {
+					allA[i].style.backgroundColor="";
+				}
+			
+			}
+			var Timmer;
+			function autoChange(){
+				Timmer=setInterval(function(){
+					index++;
+					allAHover();
+					if (index>=imgs.length-1) {
+						allA[0].style.backgroundColor="#000";
+					}else{
+						allA[index].style.backgroundColor="#000";
+
+					}
+					move(ul,"left",-index*260,20,function(){
+						if (index>=imgs.length-1) {
+						index=0;
+						ul.style.left="0px";
+					}					
+					});
+					
+				},3000);
+
+			}
+		}
+
+	</script>
+
+</head>
+<body>
+<div class="outer">
+	<ul>
+		<li><img src="image/content01.jpeg"></li>
+		<li><img src="image/content02.jpeg"></li>
+		<li><img src="image/content03.jpeg"></li>
+		<li><img src="image/content04.jpeg"></li>
+		<li><img src="image/content05.jpeg"></li>
+		<li><img src="image/content01.jpeg"></li>
+	</ul>
+	<div class="location">
+		<a href="#"></a>
+		<a href="#"></a>
+		<a href="#"></a>
+		<a href="#"></a>
+		<a href="#"></a>
+	</div>
+</div>
+</body>
+</html>
