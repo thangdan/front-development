@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scrollEvent</title>
+	<link rel="stylesheet" type="text/css" href="test.css">
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload=function(){
+			var cc=prompt();
+			var dd=cc.split(/\s/g);
+			console.log(dd);
+				for (var i = 0; i < dd.length; i++) {
+					for (var j= i+1; j < dd.length; j++) {
+						var patt1 = new RegExp(dd[j]);
+						if (patt1.test(dd[i]+",")) {
+							dd.splice(j,1);
+							j=j-1;
+						}
+					}
+				}
+				console.log("The number of words in this passage is:"+dd.length,dd.join(" "));
+ 
+		};
+		/*
+		为事件绑定函数
+		obj:绑定函数的元素对象
+		eventStr：绑定的事件名称
+		callback：回调函数
+		addEventListener()不支持IE8及以下的浏览器
+		attachEvent()支持IE8及以下的浏览器
+		 */
+		function bind(obj,eventStr,callback){
+
+			if (obj.addEventListener) {
+				obj.addEventListener(eventStr,callback,false);
+			}else{
+				obj.attachEvent("on"+eventStr,function(){
+					callback.call(obj);
+				});
+			}
+		}
+	</script>
+</head>
+<body>
+
+<div class="box1" id="box1">
+	
+</div>
+</body>
+</html>
